@@ -1,0 +1,990 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <light name='sun_0' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>8.42474 9.70985 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='Apriltag36_11_00001'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00001/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00001/materials/textures</uri>
+              <name>Apriltag36_11_00001</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>5.39712 -1.47825 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00002'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00002/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00002/materials/textures</uri>
+              <name>Apriltag36_11_00002</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>4.86408 -7.13671 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00003'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00003/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00003/materials/textures</uri>
+              <name>Apriltag36_11_00003</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>2.45505 4.54818 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00004'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00004/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00004/materials/textures</uri>
+              <name>Apriltag36_11_00004</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>8.93561 4.22616 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>3852 766000000</sim_time>
+      <real_time>65 377990322</real_time>
+      <wall_time>1588272903 851252853</wall_time>
+      <iterations>64827</iterations>
+      <model name='Apriltag36_11_00000_0'>
+        <pose frame=''>-3 2 0.5 0 1.57079 0</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-3 2 0.5 0 1.57079 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00001'>
+        <pose frame=''>3 -3 0.5 3.14159 1.57079 2.94159</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>3 -3 0.5 3.14159 1.57079 2.94159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00002'>
+        <pose frame=''>4 -8 0.5 3.09484 1.57079 2.54484</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>4 -8 0.5 3.09484 1.57079 2.54484</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00003'>
+        <pose frame=''>1.5 3 0.5 3.13024 1.57079 -2.20295</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>1.5 3 0.5 3.13024 1.57079 -2.20295</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00004'>
+        <pose frame=''>5 1 0.5 2.96659 1.57079 -2.96659</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>5 1 0.5 2.96659 1.57079 -2.96659</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00005'>
+        <pose frame=''>-3 -4 0.5 -3.01984 1.57079 -2.61984</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-3 -4 0.5 -3.01984 1.57079 -2.61984</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00006'>
+        <pose frame=''>-1 -7 0.5 -2.4794 1.57079 2.05352</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-1 -7 0.5 -2.4794 1.57079 2.05352</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00007'>
+        <pose frame=''>-1 7.5 0.499999 1.5083 1.57079 -1.01834</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-1 7.5 0.499999 1.5083 1.57079 -1.01834</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00008'>
+        <pose frame=''>6 -6 0.5 -2.91659 1.57079 2.91659</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>6 -6 0.5 -2.91659 1.57079 2.91659</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00009'>
+        <pose frame=''>5 6 0.499994 3.03657 1.57079 -2.54661</pose>
+        <scale>1 0.68376 1</scale>
+        <link name='main'>
+          <pose frame=''>5 6 0.499994 3.03657 1.57079 -2.54661</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00010'>
+        <pose frame=''>6 3 0.500014 2.84661 1.57079 2.94661</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>6 3 0.500014 2.84661 1.57079 2.94661</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00011'>
+        <pose frame=''>-6 5 0.5 -3.14159 1.57079 2.94159</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-6 5 0.5 -3.14159 1.57079 2.94159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00012'>
+        <pose frame=''>-2 5 0.5 -2.505 1.57079 -2.20739</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-2 5 0.5 -2.505 1.57079 -2.20739</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00013'>
+        <pose frame=''>0 -1.5 0.499944 -2.48032 1.57079 -2.87557</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>0 -1.5 0.499944 -2.48032 1.57079 -2.87557</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00014'>
+        <pose frame=''>-7.2 -3 0.5 -3.02161 1.57079 -2.77161</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-7.2 -3 0.5 -3.02161 1.57079 -2.77161</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Apriltag36_11_00015'>
+        <pose frame=''>-5 0 0.5 -3.04159 1.57079 3.04159</pose>
+        <scale>1 1 1</scale>
+        <link name='main'>
+          <pose frame=''>-5 0 0.5 -3.04159 1.57079 3.04159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+      <light name='sun_0'>
+        <pose frame=''>8.42474 9.70985 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='Apriltag36_11_00005'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00005/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00005/materials/textures</uri>
+              <name>Apriltag36_11_00005</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-4.89223 -4.93755 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00006'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00006/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00006/materials/textures</uri>
+              <name>Apriltag36_11_00006</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-0.774191 -7.43761 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00007'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00007/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00007/materials/textures</uri>
+              <name>Apriltag36_11_00007</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-2.68367 5.96498 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00008'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00008/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00008/materials/textures</uri>
+              <name>Apriltag36_11_00008</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>8.27217 -6.55825 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00009'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1.4625 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00009/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00009/materials/textures</uri>
+              <name>Apriltag36_11_00009</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1.4625 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>6.24817 7.53601 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00010'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00010/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00010/materials/textures</uri>
+              <name>Apriltag36_11_00010</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>9.38476 1.01038 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00011'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00011/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00011/materials/textures</uri>
+              <name>Apriltag36_11_00011</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-6.49677 4.7941 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00012'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00012/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00012/materials/textures</uri>
+              <name>Apriltag36_11_00012</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>0.121293 7.79711 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00013'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00013/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00013/materials/textures</uri>
+              <name>Apriltag36_11_00013</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-6.79357 -8.21811 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00014'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00014/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00014/materials/textures</uri>
+              <name>Apriltag36_11_00014</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-8.01036 -3.02305 0 0 -0 0</pose>
+    </model>
+    <model name='Apriltag36_11_00015'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00015/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00015/materials/textures</uri>
+              <name>Apriltag36_11_00015</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>-6.66698 0.01989 0 0 -0 0</pose>
+    </model>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-22.1414 6.45463 36.1074 0 1.1162 -0.66492</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='Apriltag36_11_00000_0'>
+      <link name='main'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <visual name='main_Visual'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://Apriltag36_11_00000/materials/scripts</uri>
+              <uri>model://Apriltag36_11_00000/materials/textures</uri>
+              <name>Apriltag36_11_00000</name>
+            </script>
+          </material>
+        </visual>
+        <collision name='main_collision'>
+          <geometry>
+            <box>
+              <size>1 1 0.01</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <pose frame=''>10.4766 8.90731 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>
